@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/style/bootstrap/bootstrap.css}"
+          rel="stylesheet">
+</head>
+<body>
+<div class="card">
+
+        <div class="card-header text-bg-primary">
+            AUTENTICACIÓN
+        </div>
+        <div class="card-body">
+            <form method="post" th:action="@{/login}" th:object="${loginform}">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control"
+                           id="floatingInput"
+                           th:field="*{usuario}"
+                           placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control"
+                           id="floatingPassword"
+                           th:field="*{password}"
+                           placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <hr/>
+                <button type="submit" class="btn btn-primary">INGRESAR</button>
+            </form>
+    </div>
+</div>
+</body>
+</html>
